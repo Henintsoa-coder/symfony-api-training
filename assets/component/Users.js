@@ -7,7 +7,7 @@ export default function Users() {
   console.log(users);
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/users').then(res =>{
+    axios.get('https://localhost:8000/api/users').then(res =>{
       const usersList = res.data 
       SetUsers({usersList, loading: false})
     });
