@@ -63,6 +63,12 @@ Encore
 
     // uncomment if you use React
     .enableReactPreset()
+    
+    .configureDevServerOptions(options => {
+        options.allowedHosts = 'all';
+        // in older Webpack Dev Server versions, use this option instead:
+        // options.firewall = false;
+    })
 
     // uncomment to get integrity="..." attributes on your script & link tags
     // requires WebpackEncoreBundle 1.4 or higher
